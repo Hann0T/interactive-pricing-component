@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>interactive pricing component</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+
+
+		<header class="pricingComponent__header">
+			<h1 class="pricingComponent__title">Simple, traffic-based pricing</h1>
+			<p class="pricingComponent__text">Sign-up four our 30-day tiral. No credit card required.</p>
+		</header>
+
+		<div class="pricingComponent__card">
+			
+			<div class="card__interactive">
+
+				<h2 class="card__views">100k  pageviews</h2>
+				<input type="range" class="card__range" id="card__range" min="8" max="36" value="16" step="4">
+				<!-- <output for="card__range"></output> -->
+				<h3 class="card__price">$16.00 <span class="card__time">/month</span></h3>
+
+				<div class="card__selector">
+					<p class="selector__monthly">Monthly Billing</p>
+					<input type="checkbox" class="card__checkbox" id="card__checkbox">
+					<label for="card__checkbox" class="card__switch"></label>
+					<p class="selector__yearly">Yearly Billing</p>
+				</div>
+
+			</div>
+<hr>
+			<div class="card__submit">
+				<ul class="card__list">
+					<li class="card__listItem">Unlimited websites</li>
+					<li class="card__listItem">100% data ownership</li>
+					<li class="card__listItem">Email reports</li>
+				</ul>
+				<button class="card__button">Start my trial</button>
+			</div>
+
+		</div>
+
+
+	</div>
+<script src="./JS/index.js"></script>
+</body>
+</html>
