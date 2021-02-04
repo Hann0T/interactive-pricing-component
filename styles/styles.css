@@ -107,6 +107,7 @@ body {
 .card__range {
 	-webkit-appearance: none;
 	width: 100%;
+	position: relative;
 }
 .card__range:focus {
 	outline: none;
@@ -114,7 +115,7 @@ body {
 .card__range::-webkit-slider-runnable-track {
 	-webkit-appearance: none;
 
-	background-color: var(--Soft-Cyan-Full-Slider-Bar);
+	background-color: var(--Light-Grayish-Blue-Empty-Slider-Bar);
 
 	height: 10px;
 	border-radius: 10px;
@@ -143,10 +144,27 @@ body {
 	background-image: url(../images/icon-slider.svg);
 	background-repeat: no-repeat;
 	background-position: center;
+
+	position: relative;
+	z-index: 100;
 }
 .card__range::-webkit-slider-thumb:active {
 	background-color: #0ba99a;
 	transition: background .2s;
+}
+
+.card__range::before {
+	content: '';
+	display: block;
+
+	height: 9px;
+	width: 50%;
+
+	position: absolute;
+	z-index: 10;
+
+	border-radius: 10px;
+	background-color: var(--Soft-Cyan-Full-Slider-Bar);
 }
 
 .card__price {
